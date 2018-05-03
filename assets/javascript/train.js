@@ -24,6 +24,7 @@ var destination;
 var arrivalTime;
 var frequency;
 var minutesAway;
+var trainStart = 3;
 
 // --------------------------------------------------------------
 
@@ -57,7 +58,7 @@ database.ref().on("value", function (snapshot) {
     $("#train-name").text(trainName);
     $("#destination").text(destination);
     $("#arrival-time").text(arrivalTime);
-    $("#highest-price").text(highPrice);
+    $("#frequency").text(frequency);
     
 
     // If any errors are experienced, log them to console.
@@ -69,20 +70,24 @@ database.ref().on("value", function (snapshot) {
 
 // Whenever a user clicks the submit-bid
 
-$("#submit-bid").on("click", function (event) {
+$("#submit-info").on("click", function (event) {
     event.preventDefault();
     // Get the input values
-    var bidderName = $("#bidder-name").val().trim();
-    var bidderPrice = parseInt($("#bidder-price").val().trim());
+    var trainName = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var arrivalTime = $("#arrival-time").val().trim();
+    var frequency = parseInt($("#frequency").val().trim());
 
     // Log the Bidder and Price (Even if not the highest)
-    console.log(bidderName);
-    console.log(bidderPrice);
+    console.log(trainName);
+    console.log(destination);
+    console.log(arrivalTime);
+    console.log(frequency);
 
     if (bidderPrice > highPrice) {
 
         // Alert
-        alert("You are now the highest bidder.");
+        alert("Train added.");
 
         // Save the new price in Firebase. This will cause our "value" callback above to fire and update
         // the UI.
