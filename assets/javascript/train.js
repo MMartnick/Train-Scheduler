@@ -24,7 +24,8 @@ var destination;
 var arrivalTime;
 var frequency;
 var minutesAway;
-var trainStart = 3;
+var trainStart = moment("2016-03-12 3:00:00");
+var duration = moment.duration(arrivalTime - startTime).asMinutes();
 
 // --------------------------------------------------------------
 
