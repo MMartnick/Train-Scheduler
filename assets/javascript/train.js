@@ -1,9 +1,6 @@
 /* global moment firebase */
 
 // Initialize Firebase
-
-
-// Initialize Firebase
 var config = {
     apiKey: "AIzaSyAdFCBBC6e9f6dPAA0aYBuzbYKAmqrQjtA",
     authDomain: "train-schedule-d3589.firebaseapp.com",
@@ -23,10 +20,10 @@ var trainName;
 var destination;
 var arrivalTime;
 var frequency;
-var minutesAway;
+var minutesAway = duration / frequency;
 var trainStart = moment("2016-03-12 3:00:00");
 var duration = moment.duration(arrivalTime - startTime).asMinutes();
-
+console.log(minutesAway)
 // --------------------------------------------------------------
 
 // At the initial load and subsequent value changes, get a snapshot of the stored data.
@@ -104,6 +101,6 @@ $("#submit-info").on("click", function (event) {
     } else {
 
         // Alert
-        alert("Sorry that bid is too low. Try again.");
+        alert();
     }
 });

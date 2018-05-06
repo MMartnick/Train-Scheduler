@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--JS for time--> 
+    <!--JS for time-->
     <script src="moment.js"></script>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>Document</title>
 </head>
 
 <body>
-    <div class="banner">
-        <p>Train Time!</p>
+
+    <div class="nav"></div>
+    <div class="container">
+
+        <section class="table">
+
+        </section>
+
+        <form>
+            <input class="form-item" id="train-name" placeholder="Train Name"></input>
+            <input class="form-item" id="destination" placeholder="Destination"></input>
+            <input class="form-item" id="arrival-time" placeholder="First Train Time"></input>
+            <input class="form-item" id="frequency" placeholder="Frequency"></input>
+            <br>
+            <button class="form-item" id="submit-info">Submit</button>
+        </form>
+
     </div>
-
-    <section class="table">
-
-    </section>
-
-    <form>
-        <input id="train-name">Train Name</input>
-        <input id="destination">Destination</input>
-        <input id="arrival-time">First Train Time - Military Time</input>
-        <input id="frequency">Frequency - Minutes</input>
-        <button id="submit-info">Click</button>
-    </form>
-
-
 
 
 </body>
